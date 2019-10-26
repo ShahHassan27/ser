@@ -47,6 +47,6 @@ app.post('/register',(req,res) => {reg.handleReg(req,res,mydata,bcrypt,saltRound
 app.get('/profile/:id',(req,res) => {prof.handlePro(req,res,mydata)})
 app.put('/image',(req,res) => {img.handleImg(req,res,mydata)})
 app.post('/imageUrl',(req,res) => {img.handleApi(req,res)})
-app.listen(3000,()=>{
-	console.log('App is on 3000');
+app.listen(process.env.PORT||3000,()=>{
+	console.log(`App is on {process.env.PORT}`);
 })
