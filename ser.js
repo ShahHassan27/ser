@@ -41,7 +41,8 @@ app.use(cors())
 		entries: 0,
 		joined: new Date()
 	}
-	]} app.get('/',(req,res)=>{res.send(database.users);})*/
+	]}*/
+ app.get('/',(req,res)=>{res.send('It is working');})
 app.post('/signin',sgIn.handlesgIn(mydata,bcrypt,saltRounds)) // shortcut
 app.post('/register',(req,res) => {reg.handleReg(req,res,mydata,bcrypt,saltRounds)}) /* injecting dependencies [app.post('/register',(req,res) => {reg.handleReg(req,res,mydata,bcrypt)}] */
 app.get('/profile/:id',(req,res) => {prof.handlePro(req,res,mydata)})
