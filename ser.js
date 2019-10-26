@@ -13,10 +13,13 @@ var knex = require('knex')
 const mydata = knex({
   client: 'pg',
   connection: {
-    host : 'postgresql-rigid-11361',
+    connectionString : process.env.DATABASE_URL,
+    ssl:true,
+    /* changed database
     user : 'postgres',
     password : '9145',
     database : 'fd'
+    */
   }
 });
 // mydata.select('*').from('login').then(dta =>{console.log(dta);});
